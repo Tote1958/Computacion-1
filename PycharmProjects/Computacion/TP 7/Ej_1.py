@@ -4,3 +4,4 @@ def sum_of_differences(nums):
     for i in range(len(nums) - 1):
         total = total + (nums[i] - nums[(i + 1)])
     return total
+

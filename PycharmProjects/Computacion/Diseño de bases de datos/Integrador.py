@@ -29,28 +29,36 @@ def menu():
 def mostrar_tabla_clientes(cursor):
     cursor.execute(f"SELECT * FROM clientes;")
     data = cursor.fetchall()
-    print(data)
+    print('ID | Nombre y Apellido |   DNI    | Telefono ')
+    for i in range(len(data)):
+        print(data[i])
     time.sleep(2)
 
 
 def mostrar_tabla_productos(cursor):
     cursor.execute(f"SELECT * FROM productos;")
     data = cursor.fetchall()
-    print(data)
+    print('ID |', 'Nombre ')
+    for i in range(len(data)):
+        print(data[i])
     time.sleep(2)
 
 
 def mostrar_tabla_pedidos(cursor):
     cursor.execute(f"SELECT * FROM pedidos;")
     data = cursor.fetchall()
-    print(data)
+    print('ID | ID cliente |  Estado | Fecha de pedido | Cantidad | Id producto')
+    for i in range(len(data)):
+        print(data[i])
     time.sleep(2)
 
 
 def mostrar_tabla_deposito(cursor):
     cursor.execute(f"SELECT * FROM deposito;")
     data = cursor.fetchall()
-    print(data)
+    print('ID | Cantidad | Id Producto ')
+    for i in range(len(data)):
+        print(data[i])
     time.sleep(2)
 
 
